@@ -4,8 +4,15 @@ int main() {
     int quantity;
     float unitPrice, totalPrice;
 
-    scanf("%d", &quantity);
+    while (1) {
+        scanf("%d", &quantity);
+        if (quantity > 0){
+            break;
+        }
+        printf("[Erro] Quantidade invalida. Entre com um numero inteiro positivo.\n");
+    };
 
+    
     if (quantity < 12) {
         unitPrice = 0.8;
     } else {
